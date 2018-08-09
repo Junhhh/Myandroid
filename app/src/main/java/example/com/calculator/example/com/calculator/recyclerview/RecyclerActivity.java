@@ -1,9 +1,11 @@
 package example.com.calculator.example.com.calculator.recyclerview;
 
 import android.os.Bundle;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
+import android.widget.GridView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,9 +24,14 @@ public class RecyclerActivity extends BaseActivity {
 
         inititem();
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler);
-        StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
+        //设置瀑布流
+        //StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
+        //设置竖向布局
         //LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(staggeredGridLayoutManager);
+        //设置网格布局
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(this,2);
+
+        recyclerView.setLayoutManager(gridLayoutManager);
         itemAdapter Adapter = new itemAdapter(Data);
         recyclerView.setAdapter(Adapter);
         recyclerView.addItemDecoration(new RecycleViewDivider(RecyclerActivity.this,LinearLayoutManager.HORIZONTAL,1,getResources().getColor(R.color.colorView)));
@@ -42,14 +49,16 @@ public class RecyclerActivity extends BaseActivity {
             Data.add(item4);
             item item5 = new item("BroadcastBest",R.mipmap.ic_launcher);
             Data.add(item5);
-            item item6 = new item("F",R.mipmap.ic_launcher);
+            item item6 = new item("IO流",R.mipmap.ic_launcher);
             Data.add(item6);
-            item item7 = new item("G",R.mipmap.ic_launcher);
+            item item7 = new item("Database",R.mipmap.ic_launcher);
             Data.add(item7);
-            item item8 = new item("H",R.mipmap.ic_launcher);
+            item item8 = new item("LitePal",R.mipmap.ic_launcher);
             Data.add(item8);
-            item item9 = new item("I",R.mipmap.ic_launcher);
+            item item9 = new item("内容提供器",R.mipmap.ic_launcher);
             Data.add(item9);
+            item item10 = new item("获取联系人信息",R.mipmap.ic_launcher);
+            Data.add(item10);
         }
     }
 }

@@ -30,8 +30,9 @@ public class BroadcastMainActivity extends AppCompatActivity {
         intentFilter = new IntentFilter();
         intentFilter.addAction("android.net.conn.CONNECTIVITY_CHANGE");
         networkChangeReceiver = new NetworkChangeReceiver();
-        registerReceiver(networkChangeReceiver,intentFilter);
-        
+        registerReceiver(networkChangeReceiver,intentFilter);//注册广播监听器
+
+        //发送广播 MY_BROADCAST
         sendbroadcast = (Button) findViewById(R.id.sendBroadcast);
         sendbroadcast.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,7 +48,7 @@ public class BroadcastMainActivity extends AppCompatActivity {
         super.onDestroy();
         unregisterReceiver(networkChangeReceiver);
     }
-
+    //广播接收器
     class NetworkChangeReceiver extends BroadcastReceiver{
         @Override
         public void onReceive(Context context, Intent intent) {

@@ -15,7 +15,7 @@ import example.com.calculator.example.com.calculator.recyclerview.RecyclerActivi
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
 
-    Button b1,b2,b3;
+    Button b1,b3;
     EditText e1,e2;
     TextView t1;
 
@@ -29,14 +29,12 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         e1.setOnClickListener(this);
         e2.setOnClickListener(this);
         b1.setOnClickListener(this);
-        b2.setOnClickListener(this);
         b3.setOnClickListener(this);
 
     }
 
     private void initView() {
         b1 = (Button)findViewById(R.id.button);
-        b2 = (Button)findViewById(R.id.button_login);
         b3 =(Button)findViewById(R.id.recycler_button);
         e1 = (EditText) findViewById(R.id.edit1);
         e2 = (EditText) findViewById(R.id.edit2);
@@ -70,13 +68,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                     Toast.makeText(MainActivity.this,e.getMessage(),Toast.LENGTH_SHORT).show();
                 }
                 break;
-            case R.id.button_login:
-                Intent intent = new Intent(MainActivity.this,Main2Activity.class);
-                startActivity(intent);
-                break;
             case R.id.recycler_button:
                 Intent intent1 = new Intent("com.example.calculator.FORCE_OFFLINE");
-                sendBroadcast(intent1);
+                sendBroadcast(intent1);//发送广播
         }
     }
 

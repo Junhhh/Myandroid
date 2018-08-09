@@ -38,8 +38,8 @@ public class BaseActivity extends AppCompatActivity {
         super.onResume();
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction("com.example.calculator.FORCE_OFFLINE");
-        receiver = new ForceOfflineReceiver();
-        registerReceiver(receiver,intentFilter);
+        receiver = new ForceOfflineReceiver();//生成下面的内部类的实例
+        registerReceiver(receiver,intentFilter);//注册广播监听器，接收到广播后就会调用相关操作
     }
 
     @Override

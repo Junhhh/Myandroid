@@ -10,6 +10,11 @@ import android.widget.Toast;
 
 import java.util.List;
 
+import example.com.calculator.Contacts.CallPhoneActivity;
+import example.com.calculator.Contacts.ContactActivity;
+import example.com.calculator.FilePersistence.DatabaseActivity;
+import example.com.calculator.FilePersistence.FilePersistenceActivity;
+import example.com.calculator.LitePal.LitePalActivity;
 import example.com.calculator.other.LifeActivity;
 import example.com.calculator.other.Main2Activity;
 import example.com.calculator.other.MainActivity;
@@ -56,9 +61,26 @@ public class itemAdapter extends RecyclerView.Adapter<itemAdapter.ViewHolder> {
                         intent = new Intent(v.getContext(), BroadcastMainActivity.class);
                         v.getContext().startActivity(intent);
                         break;
-                    case "BroadcastBest":
-                        intent = new Intent(v.getContext(), BroadcastBest.class);
+                    case "IO流":
+                        intent = new Intent(v.getContext(), FilePersistenceActivity.class);
                         v.getContext().startActivity(intent);
+                        break;
+                    case "Database":
+                        intent = new Intent(v.getContext(), DatabaseActivity.class);
+                        v.getContext().startActivity(intent);
+                        break;
+                    case "LitePal":
+                        intent = new Intent(v.getContext(), LitePalActivity.class);
+                        v.getContext().startActivity(intent);
+                        break;
+                    case "内容提供器":
+                        intent = new Intent(v.getContext(), CallPhoneActivity.class);
+                        v.getContext().startActivity(intent);
+                        break;
+                    case "获取联系人信息":
+                        intent = new Intent(v.getContext(), ContactActivity.class);
+                        v.getContext().startActivity(intent);
+                        break;
                 }
 /*                if(item.getName() == "C") {
                     intent = new Intent(v.getContext(), LifeActivity.class);

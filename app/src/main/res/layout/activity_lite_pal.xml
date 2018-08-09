@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/create_litepal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="create"
+        />
+    <Button
+        android:id="@+id/add_litepal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="add"
+        />
+    <Button
+        android:id="@+id/update_litepal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="update"
+        />
+    <Button
+        android:id="@+id/delete_litepal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="delete"
+        />
+    <Button
+        android:id="@+id/select_litepal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="select"
+        />
+
+</LinearLayout>

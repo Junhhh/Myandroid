@@ -48,7 +48,6 @@ public class Main2Activity extends BaseActivity implements View.OnClickListener 
         b1.setOnClickListener(this);
         b2.setOnClickListener(this);
         b3.setOnClickListener(this);
-        b4.setOnClickListener(this);
 
     }
 
@@ -59,7 +58,6 @@ public class Main2Activity extends BaseActivity implements View.OnClickListener 
         b1 = (Button)findViewById(R.id.button2);
         b2 = (Button)findViewById(R.id.button3);
         b3 = (Button)findViewById(R.id.button4);
-        b4 = (Button)findViewById(R.id.button5);
     }
 
 
@@ -110,11 +108,6 @@ public class Main2Activity extends BaseActivity implements View.OnClickListener 
                 Intent intent = new Intent(Main2Activity.this,ViewActivity.class);
                 intent.putExtra("Inputdata",e3.getText().toString());
                 startActivity(intent);
-                break;
-            case R.id.button5:
-                Intent intent1 = new Intent(Main2Activity.this,LifeActivity.class);
-                startActivity(intent1);
-                finish();
                 break;
         }
     }
