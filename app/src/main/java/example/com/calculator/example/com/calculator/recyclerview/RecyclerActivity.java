@@ -59,6 +59,22 @@ public class RecyclerActivity extends BaseActivity {
             Data.add(item9);
             item item10 = new item("获取联系人信息",R.mipmap.ic_launcher);
             Data.add(item10);
+            item item11 = new item("通知",R.mipmap.ic_launcher);
+            Data.add(item11);
+            item item12 = new item("相机",R.mipmap.ic_launcher);
+            Data.add(item12);
+            item item13 = new item("音乐播放",R.mipmap.ic_launcher);
+            Data.add(item13);
+            item item14 = new item("视频播放",R.mipmap.ic_launcher);
+            Data.add(item14);
+            item item15 = new item("HTTP",R.mipmap.ic_launcher);
+            Data.add(item15);
+            item item16 = new item("Thread",R.mipmap.ic_launcher);
+            Data.add(item16);
+            item item17 = new item("Service",R.mipmap.ic_launcher);
+            Data.add(item17);
+            item item18 = new item("下载",R.mipmap.ic_launcher);
+            Data.add(item18);
         }
     }
 }

@@ -10,11 +10,19 @@ import android.widget.Toast;
 
 import java.util.List;
 
+import example.com.calculator.AndroidThreadTest.ThreadTestActivity;
 import example.com.calculator.Contacts.CallPhoneActivity;
 import example.com.calculator.Contacts.ContactActivity;
+import example.com.calculator.DownloadTest.DownloadActivity;
 import example.com.calculator.FilePersistence.DatabaseActivity;
 import example.com.calculator.FilePersistence.FilePersistenceActivity;
+import example.com.calculator.HTTP.HttpActivity;
 import example.com.calculator.LitePal.LitePalActivity;
+import example.com.calculator.Notification.CameraActivity;
+import example.com.calculator.Notification.MusicActivity;
+import example.com.calculator.Notification.NotificationActivity;
+import example.com.calculator.Notification.VideoActivity;
+import example.com.calculator.Service.MyServiceActivity;
 import example.com.calculator.other.LifeActivity;
 import example.com.calculator.other.Main2Activity;
 import example.com.calculator.other.MainActivity;
@@ -79,6 +87,38 @@ public class itemAdapter extends RecyclerView.Adapter<itemAdapter.ViewHolder> {
                         break;
                     case "获取联系人信息":
                         intent = new Intent(v.getContext(), ContactActivity.class);
+                        v.getContext().startActivity(intent);
+                        break;
+                    case "通知":
+                        intent = new Intent(v.getContext(), NotificationActivity.class);
+                        v.getContext().startActivity(intent);
+                        break;
+                    case "相机":
+                        intent = new Intent(v.getContext(), CameraActivity.class);
+                        v.getContext().startActivity(intent);
+                        break;
+                    case "音乐播放":
+                        intent = new Intent(v.getContext(), MusicActivity.class);
+                        v.getContext().startActivity(intent);
+                        break;
+                    case "视频播放":
+                        intent = new Intent(v.getContext(), VideoActivity.class);
+                        v.getContext().startActivity(intent);
+                        break;
+                    case "HTTP":
+                        intent = new Intent(v.getContext(), HttpActivity.class);
+                        v.getContext().startActivity(intent);
+                        break;
+                    case "Thread":
+                        intent = new Intent(v.getContext(), ThreadTestActivity.class);
+                        v.getContext().startActivity(intent);
+                        break;
+                    case "Service":
+                        intent = new Intent(v.getContext(), MyServiceActivity.class);
+                        v.getContext().startActivity(intent);
+                        break;
+                    case "下载":
+                        intent = new Intent(v.getContext(), DownloadActivity.class);
                         v.getContext().startActivity(intent);
                         break;
                 }

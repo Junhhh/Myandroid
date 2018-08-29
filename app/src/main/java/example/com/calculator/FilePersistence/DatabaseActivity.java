@@ -11,6 +11,9 @@ import android.widget.Button;
 
 import example.com.calculator.R;
 
+/**
+ *   SQLite
+ */
 public class DatabaseActivity extends AppCompatActivity implements View.OnClickListener {
 
     private MyDatabaseHelper dbHelper;

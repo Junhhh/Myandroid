@@ -17,6 +17,11 @@ import java.io.OutputStreamWriter;
 import example.com.calculator.BaseActivity;
 import example.com.calculator.R;
 
+/**
+ *文件存储
+ * IO 流
+ */
+
 public class FilePersistenceActivity extends BaseActivity {
 
     private EditText editText;
